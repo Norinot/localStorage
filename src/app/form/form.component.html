@@ -1,0 +1,66 @@
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label class="form-label" for="fullnameInput">Full name:</label>
+    <input
+      id="fullnameInput"
+      class="form-control"
+      type="text"
+      name="fullname"
+      placeholder="Full name"
+      formControlName="fullname"
+    />
+  </div>
+
+  <div>
+    <label class="form-label" for="email">E-mail:</label>
+    <input
+      class="form-control"
+      type="text"
+      id="email"
+      formControlName="email"
+    />
+  </div>
+
+  <div>
+    <label class="form-label" for="phone_number">Phone number:</label>
+    <input
+      class="form-control"
+      type="text"
+      id="phone_number"
+      formControlName="phone_number"
+    />
+  </div>
+
+  <div>
+    <label class="form-label" for="coupon">Coupon:</label>
+    <input
+      class="form-control"
+      type="text"
+      id="coupon"
+      formControlName="coupon"
+    />
+  </div>
+  <div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Full name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone Number</th>
+      <th scope="col">Coupon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{MyArray?.fullName}}</td>
+      <td>{{MyArray?.email}}</td>
+      <td>{{MyArray?.phoneNumber}}</td>
+      <td>{{MyArray?.coupon}}</td>
+    </tr>
+  </tbody>
+</table>
